@@ -10,7 +10,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6; }
   body#bg-img {
-    background: url(../img/background.jpg); }
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
 
 h1, h2, h3 {
   margin: 0;
