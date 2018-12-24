@@ -36,3 +36,53 @@
         }
     }
 }
+
+//Meny overlay 
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.8;
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-branding, &-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: darken($color:$primary-color, $amount: 6);
+        transform: translate3d(0, -100%, 0);
+        @include easeInOut;
+
+        //slide from top
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    &-branding {
+        background: $primary-color;
+        transform: translate3d(0, 100%, 0);
+        @include easeInOut;
+
+        //slide from bottom
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+
+    }
+}
