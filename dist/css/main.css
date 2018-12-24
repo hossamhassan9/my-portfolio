@@ -1,18 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700");
-.menu-btn {
-  position: absolute;
-  z-index: 3;
-  right: 35px;
-  top: 35px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out; }
-  .menu-btn .btn-line {
-    width: 28px;
-    height: 3px;
-    margin: 0 0 5px 0;
-    background: #fff;
-    transition: all 0.5s ease-in-out; }
-
 * {
   box-sizing: border-box; }
 
