@@ -71,7 +71,7 @@
   .menu .nav-link {
     display: inline-block;
     position: relative;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     color: #fff;
     text-transform: uppercase;
@@ -110,11 +110,14 @@
   .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0); }
-    .menu-nava.nav-link {
-      font-size: 1rem; }
   .menu-branding {
     height: 25vh;
-    transform: translate3d(100%, 0, 0); } }
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../img/my-photo-small.png");
+      width: 150px;
+      height: 150px;
+      background-size: cover; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {

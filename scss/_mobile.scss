@@ -35,15 +35,19 @@
         height: 75vh;
         transform: translate3d(-100%,0,0);
 
-       &a.nav-link {
-           font-size: 1rem;
-       }
     }
 
 
     .menu-branding {
         height: 25vh;
         transform: translate3d(100%,0,0);
+
+        .portrait {
+            background: url('../img/my-photo-small.png');
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+        }
     }
 }
 
