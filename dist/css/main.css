@@ -42,13 +42,13 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    background: #353535;
+    background: black;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-in-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #000;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-in-out; }
     .menu-branding.show {
@@ -56,14 +56,47 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("img/my-photo.jpg");
-      border-radius: 50%; }
+      background: url("../img/my-photo.jpg");
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      border: 2px solid #1BBC9B; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-in-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #1BBC9B; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1rem;
+    transition: all 0.5s ease-in-out; }
+    .menu .nav-link:hover {
+      color: #1BBC9B; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
 
 * {
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #000;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -81,7 +114,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.7); }
+      background: rgba(0, 0, 0, 0.9); }
 
 h1, h2, h3 {
   margin: 0;
@@ -91,7 +124,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.4); }
+    background: rgba(5, 5, 5, 0.4); }
 
 a {
   color: #fff;
@@ -103,7 +136,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #1BBC9B; }
 
 main {
   padding: 4rem;
@@ -113,7 +146,7 @@ main {
     main .icons a {
       padding: 0.5rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #1BBC9B;
         transition: all 0.5s ease-in-out; }
   main#home {
     overflow: hidden; }

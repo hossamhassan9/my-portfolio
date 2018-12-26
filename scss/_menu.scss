@@ -64,7 +64,7 @@
         margin: 0;
         padding: 0;
         list-style: none;
-        background: darken($color:$primary-color, $amount: 6);
+        background: darken($color:$primary-color, $amount: 0);
         transform: translate3d(0, -100%, 0);
         @include easeInOut;
 
@@ -87,9 +87,48 @@
         .portrait {
             width: 250px;
             height: 250px;
-            background: url('img/portrait.jpg');
+            background: url('../img/my-photo.jpg');
+            background-size: cover;
+            background-position: center;
             border-radius: 50%;
+            border: 2px solid $secondary-color;
         }
 
+    }
+
+    .nav-item {
+        transform: translate3d(600px, 0, 0);
+        @include easeInOut;
+
+        //slide from the right
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+        &.current > a {
+            color: $secondary-color;
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 1rem;
+        @include easeInOut;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    
+}
+
+//Delay each nav item slide by 0.1s by "using sass commands!!"
+@for $x from 1 through 4 {
+    .nav-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
     }
 }
