@@ -68,6 +68,16 @@
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .boxes {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        div {
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+    }
 }
 
 // smartphones
